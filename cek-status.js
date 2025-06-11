@@ -2,7 +2,7 @@
 const { Octokit } = require("@octokit/rest");
 const axios = require("axios");
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_TOKEN = process.env.MY_GH_TOKEN;
 const REPO_OWNER = "YanaMiku-BOTz";
 const REPO_NAME = "celengan-yanamiku";
 const PATH_DATA = "media/data.json";
