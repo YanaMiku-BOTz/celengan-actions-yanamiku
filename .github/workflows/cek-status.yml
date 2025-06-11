@@ -1,0 +1,28 @@
+# .github/workflows/cek-status.yml
+name: Cek Status Setiap 5 Menit
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Setiap 5 menit
+  workflow_dispatch:       # Bisa dipicu manual juga
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout kode
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Jalankan cek-status.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node cek-status.js
