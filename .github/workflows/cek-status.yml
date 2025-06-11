@@ -1,10 +1,9 @@
-# .github/workflows/cek-status.yml
 name: Cek Status Setiap 5 Menit
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Setiap 5 menit
-  workflow_dispatch:       # Bisa dipicu manual juga
+    - cron: '*/5 * * * *'   # Setiap 5 menit
+  workflow_dispatch:         # Bisa dijalankan manual juga
 
 jobs:
   run-script:
@@ -24,5 +23,5 @@ jobs:
 
       - name: Jalankan cek-status.js
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_GH_TOKEN }}
+          MY_GH_TOKEN: ${{ secrets.MY_GH_TOKEN }}
         run: node cek-status.js

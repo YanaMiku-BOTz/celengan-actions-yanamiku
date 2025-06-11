@@ -2,7 +2,9 @@
 const { Octokit } = require("@octokit/rest");
 const axios = require("axios");
 
+// Gunakan environment variable dari GitHub Secrets
 const GITHUB_TOKEN = process.env.MY_GH_TOKEN;
+
 const REPO_OWNER = "YanaMiku-BOTz";
 const REPO_NAME = "celengan-yanamiku";
 const PATH_DATA = "media/data.json";
@@ -70,7 +72,7 @@ async function main() {
           console.log(`Amount ${amount} not found.`);
         }
 
-        await new Promise(resolve => setTimeout(resolve, 6000));
+        await new Promise(resolve => setTimeout(resolve, 6000)); // Delay 6 detik
       }
     }
 
