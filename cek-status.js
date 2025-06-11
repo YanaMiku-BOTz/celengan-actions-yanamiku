@@ -1,6 +1,5 @@
-// cek-status.js
-import { Octokit } from "@octokit/rest";
-import axios from "axios";
+const { Octokit } = require("@octokit/rest");
+const axios = require("axios");
 
 const GITHUB_TOKEN = process.env.MY_GH_TOKEN;
 
