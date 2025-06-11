@@ -1,9 +1,9 @@
 {
   "name": "celengan",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
-    "@octokit/rest": "^20.0.0",
+    "@octokit/rest": "^22.0.0",
     "axios": "^1.6.0"
   }
 }

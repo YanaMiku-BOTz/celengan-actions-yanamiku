@@ -1,8 +1,7 @@
 // cek-status.js
-const { Octokit } = require("@octokit/rest");
-const axios = require("axios");
+import { Octokit } from "@octokit/rest";
+import axios from "axios";
 
-// Gunakan environment variable dari GitHub Secrets
 const GITHUB_TOKEN = process.env.MY_GH_TOKEN;
 
 const REPO_OWNER = "YanaMiku-BOTz";
@@ -72,7 +71,7 @@ async function main() {
           console.log(`Amount ${amount} not found.`);
         }
 
-        await new Promise(resolve => setTimeout(resolve, 6000)); // Delay 6 detik
+        await new Promise(resolve => setTimeout(resolve, 6000));
       }
     }
 
